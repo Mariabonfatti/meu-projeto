@@ -1,12 +1,12 @@
-# Projeto Fofinho de Cadastro 💖
+# Projeto de Cadastro 💖
 
-Um projetinho simples em **PHP + MariaDB**, mas com visual fofinho 🌸.
+Um projetinho simples em **PHP + MariaDB** 🌸.
 
 ## 🚀 Como usar
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/meu-projeto-fofinho.git
+   git clone https://github.com/seu-usuario/meu-projeto.git
    ```
 
 2. Configure o banco de dados (no MariaDB):
