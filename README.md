@@ -90,3 +90,8 @@ sudo systemctl restart apache2
 
 <img width="620" height="252" alt="image" src="https://github.com/user-attachments/assets/32503d28-317c-48a0-8b9d-43ddc05cd0ad" />
 
+<img width="1227" height="474" alt="image" src="https://github.com/user-attachments/assets/f001c9af-4eb0-4693-9151-ad60dea63844" />
+
+<img width="1227" height="109" alt="image" src="https://github.com/user-attachments/assets/1b99ceea-0781-4d55-bd62-b0bf5af69338" />
+
+<img width="1225" height="462" alt="image" src="https://github.com/user-attachments/assets/8e6caec4-2f8c-4b46-a0e1-9f2e74bd7731" />
