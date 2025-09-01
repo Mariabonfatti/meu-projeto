@@ -109,3 +109,32 @@ sudo systemctl restart apache2
 <img width="1227" height="109" alt="image" src="https://github.com/user-attachments/assets/1b99ceea-0781-4d55-bd62-b0bf5af69338" />
 
 <img width="1225" height="462" alt="image" src="https://github.com/user-attachments/assets/8e6caec4-2f8c-4b46-a0e1-9f2e74bd7731" />
+
+## 10) Configurar para https
+```bash
+sudo apt update
+sudo apt install -y openssl apache2
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+-keyout /etc/ssl/private/apache-selfsigned.key \
+-out /etc/ssl/certs/apache-selfsigned.crt
+```
+1. Country Name (2 letter code) [AU]:BR
+2. State or Province Name (full name) [Some-State]:SP
+3. Locality Name (eg, city) []:Salto
+4. Organization Name (eg, company) [Internet Widgits Pty Ltd]:ifsp
+5. Organizational Unit Name (eg, section) []:if
+6. Common Name (e.g. server FQDN or YOUR name) []:ifsp
+7. Email Address []:email@email.com
+```bash
+sudo cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/meu-projeto-ssl.conf
+sudo nano /etc/apache2/sites-available/meu-projeto-ssl.conf
+sudo a2ensite meu-projeto-ssl
+sudo a2enmod ssl
+sudo systemctl restart apache2
+sudo systemctl reload apache2
+```
+
+<img width="1231" height="461" alt="image" src="https://github.com/user-attachments/assets/012752d5-41f4-4a9b-862a-d1f9472c653c" />
+
+
+
