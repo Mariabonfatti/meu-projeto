@@ -1,7 +1,7 @@
 <?php
-$servername = "localhost";
-$username   = "desafioUser";
-$password   = "SenhaForte123!";
+$servername = "ec2-34-226-200-46.compute-1.amazonaws.com";
+$username   = "root";
+$password   = "ifsp";
 $dbname     = "desafioDB";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
