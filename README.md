@@ -39,32 +39,44 @@
 2. baixar .PEM
 
 ## 1) Conectar
+```bash
 ssh -i "labsuser.pem" ubuntu@ec2-34-226-200-46.compute-1.amazonaws.com
+```
 
 ## 2) Sistema e pacotes
+```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y git apache2 php php-mysql php-mbstring php-xml mariadb-server
 sudo systemctl enable --now apache2
 sudo systemctl enable --now mariadb
+```
 
 ## 3) Permissões do Apache
+```bash
 sudo chown -R ubuntu:www-data /var/www
 sudo find /var/www -type d -exec sudo chmod 2775 {} \;
 sudo find /var/www -type f -exec sudo chmod 0664 {} \;
+```
 
 ## 4) Deploy do código
+```bash
 cd /var/www/html
 sudo rm -f index.html
 sudo -u ubuntu git clone https://github.com/Mariabonfatti/meu-projeto.git .
+```
 
 ## 5) MariaDB seguro
+```bash
 sudo mysql_secure_installation
+```
 configurar senha:ifsp
 sempre yes
 
 ## 6) Banco + usuário + tabela
+```bash
 sudo mysql -u root -p 
-
+```
+```sql
 CREATE DATABASE desafioDB;
 USE desafioDB;
 
@@ -77,7 +89,7 @@ USE desafioDB;
    CREATE USER 'desafioUser'@'localhost' IDENTIFIED BY 'SenhaForte123!';
    GRANT ALL PRIVILEGES ON desafioDB.* TO 'desafioUser'@'localhost';
    FLUSH PRIVILEGES;
-
+```
 
 ## 7) Mudar localhost, user e senha no php
 localhost: ec2-34-226-200-46.compute-1.amazonaws.com
@@ -85,8 +97,10 @@ user: root
 senha:ifsp
 
 ## 8) (Se você alterou salvar.php no GitHub)
+```bash
 cd /var/www/html && sudo -u ubuntu git pull
 sudo systemctl restart apache2
+```
 
 <img width="620" height="252" alt="image" src="https://github.com/user-attachments/assets/32503d28-317c-48a0-8b9d-43ddc05cd0ad" />
 
