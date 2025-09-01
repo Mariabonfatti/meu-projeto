@@ -6,7 +6,7 @@ Um projetinho simples em **PHP + MariaDB** 🌸.
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/meu-projeto.git
+   git clone https://github.com/Mariabonfatti/meu-projeto.git
    ```
 
 2. Configure o banco de dados (no MariaDB):
@@ -38,9 +38,10 @@ Um projetinho simples em **PHP + MariaDB** 🌸.
 
 ## Playbook ubuntu
 -criação da instancia ec2 
+-baixar .PEM
 
 # 0) Conectar
-ssh -i "vockey.pem" ubuntu@ec2-34-226-200-46.compute-1.amazonaws.com
+ssh -i "labsuser.pem" ubuntu@ec2-34-226-200-46.compute-1.amazonaws.com
 
 # 1) Sistema e pacotes
 sudo apt update && sudo apt upgrade -y
@@ -60,18 +61,30 @@ sudo -u ubuntu git clone https://github.com/Mariabonfatti/meu-projeto.git .
 
 # 4) MariaDB seguro
 sudo mysql_secure_installation
+configurar senha:ifsp
+sempre yes
 
 # 5) Banco + usuário + tabela
-sudo mysql -u root -p <<'SQL'
-CREATE DATABASE desafioDB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-CREATE USER 'desafioUser'@'localhost' IDENTIFIED BY 'SenhaForte123!';
-GRANT SELECT, INSERT, UPDATE, DELETE ON desafioDB.* TO 'desafioUser'@'localhost';
-FLUSH PRIVILEGES;
-USE desafioDB;
-CREATE TABLE usuarios (id INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(100) NOT NULL, email VARCHAR(100) NOT NULL);
-SQL
+sudo mysql -u root -p 
 
-# 7) 
+CREATE DATABASE desafioDB;
+USE desafioDB;
+
+   CREATE TABLE usuarios (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     nome VARCHAR(100) NOT NULL,
+     email VARCHAR(100) NOT NULL
+   );
+
+   CREATE USER 'desafioUser'@'localhost' IDENTIFIED BY 'SenhaForte123!';
+   GRANT ALL PRIVILEGES ON desafioDB.* TO 'desafioUser'@'localhost';
+   FLUSH PRIVILEGES;
+
+
+# 7) Mudar localhost, user e senha no php
+localhost: ec2-34-226-200-46.compute-1.amazonaws.com
+user: root
+senha:ifsp
 
 # 6) (Se você alterou salvar.php no GitHub)
 cd /var/www/html && sudo -u ubuntu git pull
