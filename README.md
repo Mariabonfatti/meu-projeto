@@ -87,3 +87,6 @@ senha:ifsp
 ## 8) (Se você alterou salvar.php no GitHub)
 cd /var/www/html && sudo -u ubuntu git pull
 sudo systemctl restart apache2
+
+<img width="620" height="252" alt="image" src="https://github.com/user-attachments/assets/32503d28-317c-48a0-8b9d-43ddc05cd0ad" />
+
