@@ -69,8 +69,8 @@ sudo -u ubuntu git clone https://github.com/Mariabonfatti/meu-projeto.git .
 ```bash
 sudo mysql_secure_installation
 ```
-configurar senha:ifsp
-sempre yes
+1. configurar senha:ifsp
+2. sempre yes
 
 ## 6) Banco + usuário + tabela
 ```bash
@@ -92,9 +92,9 @@ USE desafioDB;
 ```
 
 ## 7) Mudar localhost, user e senha no php
-localhost: ec2-34-226-200-46.compute-1.amazonaws.com
-user: root
-senha:ifsp
+1. localhost: ec2-34-226-200-46.compute-1.amazonaws.com
+2. user: root
+3. senha:ifsp
 
 ## 8) (Se você alterou salvar.php no GitHub)
 ```bash
