@@ -35,3 +35,9 @@ Um projetinho simples em **PHP + MariaDB** 🌸.
 - `salvar.php` → Salva no banco 💾
 - `listar.php` → Lista usuários cadastrados 📋
 - `style.css` → Estilo fofinho ✨
+
+## Playbook ubuntu
+-criação da instancia ec2
+-conectar no cmd 
+-'ssh -i "vockey.pem" ubuntu@ec2-34-226-200-46.compute-1.amazonaws.com'
+
