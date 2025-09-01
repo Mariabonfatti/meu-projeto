@@ -101,7 +101,7 @@ USE desafioDB;
 cd /var/www/html && sudo -u ubuntu git pull
 sudo systemctl restart apache2
 ```
-
+## 9) Fotinhas do projeto
 <img width="620" height="252" alt="image" src="https://github.com/user-attachments/assets/32503d28-317c-48a0-8b9d-43ddc05cd0ad" />
 
 <img width="1227" height="474" alt="image" src="https://github.com/user-attachments/assets/f001c9af-4eb0-4693-9151-ad60dea63844" />
