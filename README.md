@@ -35,8 +35,8 @@
 - `style.css` → Estilo fofinho ✨
 
 ## Playbook ubuntu
--criação da instancia ec2 
--baixar .PEM
+1. criação da instancia ec2 
+2. baixar .PEM
 
 ## 1) Conectar
 ssh -i "labsuser.pem" ubuntu@ec2-34-226-200-46.compute-1.amazonaws.com
